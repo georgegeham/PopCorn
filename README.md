@@ -1,46 +1,68 @@
-# Getting Started with Create React App
+# 🎬 Movie Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple and elegant React app that helps you **track the movies you've watched**, see their **IMDb ratings**, and add your own **personal ratings**. Perfect for movie lovers who want to keep their movie journey organized and rated!
 
-## Available Scripts
+## ✨ Features
 
-In the project directory, you can run:
+- 🔍 Search for movies by name
+- 📄 View detailed information fetched from the OMDb API
+- ✅ Mark movies as watched
+- ⭐ Rate movies with your own personal score
+- 📊 See statistics like average IMDb rating, your average rating, and total watch time
+- ❌ Remove movies from your watched list
+- 💾 Persistent local storage — your list is saved even when you close the browser
+- 🔄 Loading spinners and smooth animations for better UX
 
-### `npm start`
+## 🖥️ Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+> You can clone the project and run it locally:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+git clone https://github.com/georgegeham/PopCorn
+cd PopCorn
+npm install
+npm start
+```
 
-### `npm test`
+## 🛠️ Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React** (with Hooks)
+- **TypeScript**
+- **Tailwind CSS** for UI styling
+- **OMDb API** for movie data: [http://www.omdbapi.com](http://www.omdbapi.com)
+- **LocalStorage** for saving the watched list
 
-### `npm run build`
+## 📁 Folder Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+src/
+├── components/
+│ ├── MovieCard.tsx
+│ ├── Detail.tsx
+│ ├── Navbar.tsx
+│ ├── Main.tsx
+│ └── Statistics.tsx
+├── Movies.ts # Movie model / types
+├── API.ts # Movie fetching logic
+├── App.tsx
+└── index.tsx
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🔑 Environment Variables
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To use the OMDb API, you’ll need an API key.
 
-### `npm run eject`
+1. Create a `.env` file in the root
+2. Add this line:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 📷 Screenshots
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Main View](./public/image.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 📄 License
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+This project is open-source and available under the [MIT License](./LICENSE).
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Built with ❤️ by [George Geham]**
