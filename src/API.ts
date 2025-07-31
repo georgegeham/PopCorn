@@ -1,9 +1,10 @@
 import axios from "axios";
 import { Movie } from "./Movies";
-const URL = "http://www.omdbapi.com/";
-const API_KEY = "e2425fa";
+const URL = process.env.REACT_APP_URL as string;
+const API_KEY = process.env.REACT_APP_API_KEY as string;
 export const searchMovie = async (query: string): Promise<Movie[] | null> => {
   try {
+    console.log(URL, API_KEY);
     const response = await axios.get(URL, {
       params: {
         apikey: API_KEY,

@@ -29,21 +29,23 @@ export default function MovieCard({
     <section
       className="box-border  p-4 flex sm:justify-start gap-4 sm:gap-2 cursor-pointer"
       onClick={async () => {
-        movieLoading(true);
-        const received = await getByID(movie.id);
-        movieLoading(false);
-        if (received) {
-          movie.addDetails(
-            received.Released,
-            Number(received.imdbRating),
-            Number(received.Runtime.trim().split(/\s+/)[0]),
-            received.Genre,
-            received.Plot,
-            received.Actors,
-            received.Director
-          );
-          selecting(movie);
-          adding(true);
+        if (!movie.added) {
+          movieLoading(true);
+          const received = await getByID(movie.id);
+          movieLoading(false);
+          if (received) {
+            movie.addDetails(
+              received.Released,
+              Number(received.imdbRating),
+              Number(received.Runtime.trim().split(/\s+/)[0]),
+              received.Genre,
+              received.Plot,
+              received.Actors,
+              received.Director
+            );
+            selecting(movie);
+            adding(true);
+          } else return;
         }
       }}
     >

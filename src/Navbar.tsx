@@ -23,7 +23,7 @@ export default function Navbar({
     };
   }, [query, search]);
   return (
-    <nav className="bg-violet-700 h-14 my-4 rounded-lg flex flex-row justify-between items-center px-2 sm:px-6 flex-wrap sm:w-[68%] w-4/5 justify-self-center text-nowrap">
+    <nav className="bg-violet-700 h-14 my-4 rounded-lg flex flex-row justify-between items-center px-2 sm:px-6 flex-wrap sm:w-[68%] w-4/5 justify-self-center text-nowrap place-self-center">
       <div className="flex-1">
         <h1 className="sm:text-xl text-white font-semibold font-Inter md:text-sm text-sm">
           <span className="sm:mr-2 sm:text-2xl text-lg">🍿</span>PopCorn
