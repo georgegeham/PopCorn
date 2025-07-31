@@ -70,7 +70,7 @@ function App() {
                 </MovieCard>
               ))
             ) : (
-              <p className="text-slate-200 text-sm justify-self-center pt-5">
+              <p className="text-slate-200 text-sm justify-self-center pt-5 text-center">
                 There Is No Movies with this Name
               </p>
             )}
